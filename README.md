@@ -1,31 +1,54 @@
 # Clothing Store API
 
-Et enkelt REST API for å håndtere produkter i en klesbutikk, utviklet med Spring Boot.
+Spring Boot REST API for managing clothing products. Developed as part of an assignment.
 
-## Funksjonalitet
+## Developer
 
-API-et støtter følgende operasjoner:
+Ayub Hazzi
 
-- `GET /api/products` – Hent alle produkter
-- `GET /api/products/{id}` – Hent et produkt med ID
-- `GET /api/products/category/{category}` – Hent produkter med spesifikk kategori
-- `POST /api/products` – Opprett nytt produkt
-- `DELETE /api/products/{id}` – Slett et produkt
+## Features
 
-## Teknologi
+- CRUD operations for `Product`
+- RESTful API using Spring Boot
+- Input validation with Jakarta Validation
+- API documentation using Swagger UI
+- Layered architecture (Controller, Service, Repository, Model)
+
+## Technologies
 
 - Java 17
 - Spring Boot
-- JPA (Hibernate)
-- H2 Database (i minne)
-- Springdoc / Swagger UI for dokumentasjon
+- Spring Data JPA
+- H2 Database (in-memory)
+- Swagger / OpenAPI
+- Maven
 
-## Kom i gang
+## How to Run
 
-### Kloning og oppsett
+1. Clone the repo  
+   `git clone https://github.com/Ayubhazzi/clothingstore.git`
 
-```bash
-git clone https://github.com/[ditt-brukernavn]/clothingstore.git
-cd clothingstore
-./mvnw clean install
-./mvnw spring-boot:run
+2. Navigate to the project folder  
+   `cd clothingstore`
+
+3. Build the project  
+   `./mvnw clean install`
+
+4. Run the application  
+   `./mvnw spring-boot:run`
+
+5. Open Swagger UI in your browser:  
+   [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+
+## API Endpoints
+
+| Method | Endpoint                                | Description              |
+|--------|-----------------------------------------|--------------------------|
+| GET    | `/api/products`                         | Get all products         |
+| POST   | `/api/products`                         | Create a new product     |
+| GET    | `/api/products/{id}`                    | Get product by ID        |
+| DELETE | `/api/products/{id}`                    | Delete product by ID     |
+| GET    | `/api/products/category/{category}`     | Get products by category |
+
+
+
